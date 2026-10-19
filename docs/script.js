@@ -10,3 +10,31 @@ if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-mot
   }, { threshold: 0.08, rootMargin: '0px 0px -20px 0px' });
   revealItems.forEach((el, i) => { el.classList.add('reveal-on-scroll'); el.style.setProperty('--reveal-delay', `${(i % 4) * 65}ms`); observer.observe(el); });
 }
+
+const visitorCounter = document.createElement('span');
+visitorCounter.style.cssText = 'display:inline-flex;align-items:center;gap:8px;white-space:nowrap';
+
+const visitorCounterImage = document.createElement('img');
+visitorCounterImage.alt = lang === 'pt' ? 'Contador de visualizações do site' : 'Site view counter';
+visitorCounterImage.referrerPolicy = 'no-referrer';
+visitorCounterImage.style.cssText = 'opacity:.65;filter:grayscale(1)';
+visitorCounterImage.src = 'https://visitor-badge.laobi.icu/badge?page_id=agonisingbasher.FNAF2-DSi-Reverse-Engineering&left_text=Views&left_color=090d13&right_color=090d13';
+
+const visitorCounterFallback = document.createElement('span');
+visitorCounterFallback.hidden = true;
+visitorCounterImage.addEventListener('error', () => {
+  console.error('Failed to load the visitor counter.');
+  visitorCounterImage.hidden = true;
+  visitorCounterFallback.hidden = false;
+  visitorCounterFallback.textContent = lang === 'pt' ? 'Contador de visualizações indisponível' : 'View counter unavailable';
+});
+
+visitorCounter.append(visitorCounterImage, visitorCounterFallback);
+document.querySelector('footer').append(visitorCounter);
+
+document.getElementById('language').addEventListener('click', () => {
+  visitorCounterImage.alt = lang === 'pt' ? 'Contador de visualizações do site' : 'Site view counter';
+  if (visitorCounterFallback.hidden === false) {
+    visitorCounterFallback.textContent = lang === 'pt' ? 'Contador de visualizações indisponível' : 'View counter unavailable';
+  }
+});
