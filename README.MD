@@ -1,8 +1,12 @@
-# <center> 🎮 Five Nights at Freddy's 2 — Nintendo DSi XL</center>
+<h1 align="center">🎮 Five Nights at Freddy's 2 — Nintendo DSi XL</h1>
 
-### Reverse Engineering • C/C++ • Homebrew • Dual-Screen UX
+<h3 align="center">Reverse Engineering • C/C++ • Homebrew • Dual-Screen UX</h3>
 
-[![Project Version](https://img.shields.io/badge/Version-V19.7-00D4FF?style=for-the-badge)](https://github.com/agonisingbasher/FNAF2-DSi-Reverse-Engineering) [![Platform](https://img.shields.io/badge/Platform-Nintendo%20DSi%20XL-34495E?style=for-the-badge)](https://github.com/agonisingbasher/FNAF2-DSi-Reverse-Engineering) [![Language](https://img.shields.io/badge/C%2FC%2B%2B-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)](https://github.com/agonisingbasher/FNAF2-DSi-Reverse-Engineering)
+<p align="center">
+  <a href="https://github.com/agonisingbasher/FNAF2-DSi-Reverse-Engineering"><img alt="Project Version" src="https://img.shields.io/badge/Version-V19.7-00D4FF?style=for-the-badge"></a>
+  <a href="https://github.com/agonisingbasher/FNAF2-DSi-Reverse-Engineering"><img alt="Platform" src="https://img.shields.io/badge/Platform-Nintendo%20DSi%20XL-34495E?style=for-the-badge"></a>
+  <a href="https://github.com/agonisingbasher/FNAF2-DSi-Reverse-Engineering"><img alt="Language" src="https://img.shields.io/badge/C%2FC%2B%2B-00599C?style=for-the-badge&logo=cplusplus&logoColor=white"></a>
+</p>
 
 > **Not a direct PC port.** An independent homebrew reimplementation of game mechanics and a custom interface designed specifically around the Nintendo DSi's **two screens**.
 
@@ -18,35 +22,37 @@ The goal is to demonstrate hands-on skills relevant to **Junior Software Develop
 
 ## 📸 Screenshots — Real Project Captures
 
-The images preserve the two stacked DSi screens. Screenshots are from the project itself.
+These images preserve the two stacked DSi screens and come from the project itself. All screenshot files are stored directly in the repository's **`docs/`** directory.
 
 | Main Menu | Boot Sequence | Security Office |
 |:---:|:---:|:---:|
-| ![Main Menu](docs/images/title.png) | ![Boot Terminal](docs/images/boot.png) | ![Security Office](docs/images/office.png) |
+| <img src="docs/title.png" alt="FNAF 2 DSi main menu" width="220"> | <img src="docs/boot.png" alt="Custom boot terminal" width="220"> | <img src="docs/office.png" alt="Dual-screen security office" width="220"> |
 
 | Interactive Cameras | Night Complete |
 |:---:|:---:|
-| ![Camera Map](docs/images/cameras.png) | ![6 AM Victory](docs/images/victory.png) |
+| <img src="docs/cameras.png" alt="Interactive camera map" width="220"> | <img src="docs/victory.png" alt="6 AM victory screen" width="220"> |
 
 ### ▶️ Gameplay Demonstration
 
-Watch the [gameplay recording](docs/videos/fnaf2-dsi-gameplay-v19.7.mp4) or open the [interactive showcase website](https://agonisingbasher.github.io/FNAF2-DSi-Reverse-Engineering/).
+Watch the [gameplay recording](docs/fnaf2-dsi-gameplay-v19.7.mp4) or open the [interactive showcase website](https://agonisingbasher.github.io/FNAF2-DSi-Reverse-Engineering/).
 
-**Capture disclosure:** this video was recorded on a **Nintendo DSi emulator running on a PC**, rather than on the original console.
+**Capture disclosure:** The gameplay video was recorded on a **Nintendo DSi emulator running on a PC**, not directly on the original console.
+
+> **File paths:** The image links above assume the files are named `title.png`, `boot.png`, `office.png`, `cameras.png` and `victory.png` directly inside `docs/`. If your uploaded filenames differ in spelling, capitalization or extension, update the links to match them exactly. The video link assumes `docs/fnaf2-dsi-gameplay-v19.7.mp4`; adjust the filename if your uploaded video is named differently.
 
 ---
 
 ## 🎯 Features & Development Work
 
-* 🎥 **Dual-screen camera monitoring:** camera switching through the touch-enabled lower screen, with the selected room rendered above.
-* 🔦 **Interactive survival controls:** flashlight, side vent lights, Freddy mask, tablet and physical button interactions.
-* 🤖 **Animatronic AI systems:** movement logic, route progression, behavior windows and per-night balancing.
-* 🎬 **Custom loading & transitions:** boot terminal, animated loading, menus and introductory sequences.
+* 🎥 **Dual-screen camera monitoring:** Camera switching through the touch-enabled lower screen, with the selected room rendered above.
+* 🔦 **Interactive survival controls:** Flashlight, side vent lights, Freddy mask, tablet and physical button interactions.
+* 🤖 **Animatronic AI systems:** Movement logic, route progression, behavior windows and per-night balancing.
+* 🎬 **Custom loading & transitions:** Boot terminal, animated loading, menus and introductory sequences.
 * 🏆 **Victory & progression UX:** 6 AM animation, shift summary, Continue and Game Menu.
-* 🌙 **Custom Night:** interface for configuring animatronic difficulty; verify complete behavior against the released V19.7 build.
-* 🐛 **Incremental debugging:** investigation of crashes, asset memory constraints, UI state transitions and gameplay issues.
+* 🌙 **Custom Night:** Interface for configuring animatronic difficulty; complete behavior should be verified against the released V19.7 build.
+* 🐛 **Incremental debugging:** Investigation of crashes, asset memory constraints, UI state transitions and gameplay issues.
 
-**Why dual-screen design matters:** the lower screen is not just a mirrored display. It serves as an **interactive control surface**, while the upper screen focuses on the gameplay view. New controls and custom UI flows were designed for this interaction model.
+**Why dual-screen design matters:** The lower screen is not just a mirrored display. It serves as an **interactive control surface**, while the upper screen focuses on the gameplay view. New controls and custom UI flows were designed for this interaction model.
 
 ---
 
@@ -76,15 +82,15 @@ These are **different hardware architectures**, not a like-for-like performance 
 
 ## 🛠️ Technologies & Engineering Concepts
 
-<div style="display: inline_block">
+<p>
   <img alt="C++" src="https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=cplusplus&logoColor=white">
   <img alt="C" src="https://img.shields.io/badge/C-A8B9CC?style=for-the-badge&logo=c&logoColor=black">
   <img alt="Git" src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white">
   <img alt="GitHub" src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white">
-</div>
+</p>
 
 **Toolchain:** devkitPro / devkitARM and the libraries required by the source's `Makefile` (confirm dependencies before building).  
-**Concepts:** gameplay state machines, hardware-aware resource handling, asset pipelines, AI logic, UI/UX, debugging and regression testing.
+**Concepts:** Gameplay state machines, hardware-aware resource handling, asset pipelines, AI logic, UI/UX, debugging and regression testing.
 
 ---
 
@@ -92,10 +98,10 @@ These are **different hardware architectures**, not a like-for-like performance 
 
 The archived ROM collection and earlier project records cover an iterative progression from the earliest prototypes to later builds:
 
-* **V0.7–V0.13:** early menu, office, camera, audio and game-over development.
-* **V0.14–V0.17.1:** timing diagnostics, camera controls and resource iteration.
-* **V0.18–V19.0:** introductory scenes, boot fixes and victory/UI elements.
-* **V19.1–V19.7:** continued gameplay fixes, loading transitions, AI balancing and two-screen polish described in project development notes.
+* **V0.7–V0.13:** Early menu, office, camera, audio and game-over development.
+* **V0.14–V0.17.1:** Timing diagnostics, camera controls and resource iteration.
+* **V0.18–V19.0:** Introductory scenes, boot fixes and victory/UI elements.
+* **V19.1–V19.7:** Continued gameplay fixes, loading transitions, AI balancing and two-screen polish described in project development notes.
 
 See [VERSION_AUDIT.md](VERSION_AUDIT.md) for evidence from the archived ROMs. **Text extracted from a binary alone does not prove a feature worked correctly.** The supplied historical archive did not contain every later build's source history.
 
@@ -113,13 +119,13 @@ See [VERSION_AUDIT.md](VERSION_AUDIT.md) for evidence from the archived ROMs. **
 3. Enter the source directory containing the `Makefile`, then run `make` if supported by that build configuration.
 4. Test the resulting `.nds` in a compatible emulator or on homebrew-enabled DSi hardware.
 
-> The source tree, Makefile, assets and ROM are to be added separately. The README alone is not a verified, reproducible build.
+> The source tree, Makefile, assets and ROM must be present separately. This README alone does not establish a verified, reproducible build.
 
 ---
 
 ## 📦 Releases
 
-**V19.7** — planned/current project milestone. The distributable ROM should be published in [GitHub Releases](https://github.com/agonisingbasher/FNAF2-DSi-Reverse-Engineering/releases) **only after testing and confirming that its bundled materials can legally be redistributed**.
+**V19.7** — current documented project milestone. The distributable ROM should be published in [GitHub Releases](https://github.com/agonisingbasher/FNAF2-DSi-Reverse-Engineering/releases) **only after testing and confirming that its bundled materials can legally be redistributed**.
 
 ---
 
