@@ -22,15 +22,15 @@ The images preserve the two stacked DSi screens. Screenshots are from the projec
 
 | Main Menu | Boot Sequence | Security Office |
 |:---:|:---:|:---:|
-| ![Main Menu](Docs/images/title.png) | ![Boot Terminal](Docs/images/boot.png) | ![Security Office](Docs/images/office.png) |
+| ![Main Menu](docs/images/title.png) | ![Boot Terminal](docs/images/boot.png) | ![Security Office](docs/images/office.png) |
 
 | Interactive Cameras | Night Complete |
 |:---:|:---:|
-| ![Camera Map](Docs/images/cameras.png) | ![6 AM Victory](Docs/images/victory.png) |
+| ![Camera Map](docs/images/cameras.png) | ![6 AM Victory](docs/images/victory.png) |
 
 ### ▶️ Gameplay Demonstration
 
-Watch the [gameplay recording](Docs/videos/fnaf2-dsi-gameplay-v19.7.mp4) or open the [interactive showcase website](https://agonisingbasher.github.io/FNAF2-DSi-Reverse-Engineering/).
+Watch the [gameplay recording](docs/videos/fnaf2-dsi-gameplay-v19.7.mp4) or open the [interactive showcase website](https://agonisingbasher.github.io/FNAF2-DSi-Reverse-Engineering/).
 
 **Capture disclosure:** this video was recorded on a **Nintendo DSi emulator running on a PC**, rather than on the original console.
 
