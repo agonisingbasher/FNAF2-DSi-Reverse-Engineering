@@ -42,3 +42,21 @@ html{scroll-behavior:smooth;scroll-padding-top:92px}
 .compare-card.console{border-color:#287f91}.compare-row{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:13px 0;border-bottom:1px solid #2a3a48;font-size:.91rem}.compare-row span{color:#a7bbc9}.compare-row b{text-align:right;font-family:monospace;font-size:.88rem}.compare-card a{display:inline-block;margin-top:20px;color:#82dfe8;font-size:.8rem;overflow-wrap:anywhere}.engineering-claim h3{font-size:clamp(1.1rem,2.5vw,1.6rem);line-height:1.4}.engineering-claim small{display:block;margin-top:16px;color:#8da1ae;line-height:1.6}
 @media(max-width:850px){.demo-layout,.interaction-layout,.comparison-grid{grid-template-columns:1fr}.video-panel{max-width:430px}.interaction-shot{max-width:310px}.interaction-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:540px){.interaction-grid{grid-template-columns:1fr}.video-stage video{max-height:none}.video-stage{max-height:none}.video-panel{max-width:100%}.compare-row{align-items:flex-start;flex-direction:column;gap:4px}.compare-row b{text-align:left}}
+
+/* Game Jolt release panel, using the site's existing security-console palette. */
+.release-section{padding-top:34px;padding-bottom:44px}
+.release-panel{position:relative;isolation:isolate;display:grid;grid-template-columns:minmax(0,1fr) 245px;gap:35px;align-items:center;overflow:hidden;border:1px solid #38505d;background:radial-gradient(circle at 85% 30%,rgba(235,75,93,.12),transparent 42%),linear-gradient(112deg,#111f2a 0%,#0b1119 72%);border-radius:16px;padding:clamp(24px,4vw,42px);box-shadow:0 25px 50px rgba(0,0,0,.24)}
+.release-panel:before{content:"";position:absolute;inset:0 0 auto;height:3px;background:linear-gradient(90deg,#f16770,#83e6e6 62%,transparent)}
+.release-kicker{font:600 11px 'IBM Plex Mono',monospace;letter-spacing:.13em;color:#f69ca4}
+.release-led{display:inline-block;width:7px;height:7px;background:#f16770;border-radius:50%;box-shadow:0 0 12px #f16770;margin-right:8px}
+.release-panel h2{font-size:clamp(32px,4.2vw,56px);margin:15px 0 16px}.release-panel p{color:#adc0ce;line-height:1.75;margin:0;max-width:720px}
+.release-tags{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 25px}.release-tags span{font:10px 'IBM Plex Mono',monospace;letter-spacing:.035em;color:#c1e4e7;padding:8px 10px;border:1px solid #3f5964;border-radius:3px;background:#0b151d}
+.release-links{display:flex;flex-wrap:wrap;align-items:center;gap:13px}.release-links a{display:inline-flex;align-items:center;justify-content:center;text-align:center;min-height:47px;padding:12px 17px;font:600 11px 'IBM Plex Mono',monospace;letter-spacing:.015em;transition:transform .2s ease,background-color .2s ease,filter .2s ease}.release-links a:hover{transform:translateY(-2px)}.release-main-link{color:#18080a;background:#f16a74;border:1px solid #f16a74}.release-main-link:hover{filter:brightness(1.14)}.release-source-link{color:#a3e5e6;border:1px solid #4c7278}.release-source-link:hover{background:#142b30}
+.release-panel .release-note{font-size:11px;margin-top:18px;color:#8299a7}
+.release-promo-link{display:block;width:100%;max-width:245px;justify-self:center;overflow:hidden;border:1px solid #38505d;border-radius:10px;box-shadow:0 12px 30px rgba(0,0,0,.3);transform:rotate(2deg);transition:transform .2s ease,box-shadow .2s ease}
+.release-promo-link:hover{transform:translateY(-3px) rotate(2deg);box-shadow:0 16px 36px rgba(0,0,0,.4)}
+.release-promo{display:block;width:100%;height:auto}
+@media(max-width:830px){.release-panel{grid-template-columns:1fr}.release-promo-link{max-width:340px}}
+@media(max-width:500px){.release-section{padding-top:24px}.release-panel{padding:23px}.release-links{display:grid}.release-links a{width:100%}}
+@media(prefers-reduced-motion:reduce){.release-links a:hover{transform:none}}
+@media(prefers-reduced-motion:reduce){.release-promo-link:hover{transform:none}}
