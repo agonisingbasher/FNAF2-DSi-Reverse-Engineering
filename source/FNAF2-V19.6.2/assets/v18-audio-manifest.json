@@ -1,0 +1,77 @@
+[
+  {
+    "name": "hall",
+    "source": "With_S2 (1).wav",
+    "seconds": 6.0625
+  },
+  {
+    "name": "chime",
+    "source": "Clocks_Chimes_Cl_02480702.wav",
+    "seconds": 16.137
+  },
+  {
+    "name": "crowd",
+    "source": "CROWD_SMALL_CHIL_EC049202.wav",
+    "seconds": 3.383
+  },
+  {
+    "name": "blip",
+    "source": "blip3.wav",
+    "seconds": 0.2025
+  },
+  {
+    "name": "gameover_static",
+    "source": "static2.wav",
+    "seconds": 33.6415
+  },
+  {
+    "name": "walk2",
+    "source": "walk2.wav",
+    "seconds": 2.4415
+  },
+  {
+    "name": "metalwalk2",
+    "source": "metalwalk2.wav",
+    "seconds": 2.224
+  },
+  {
+    "name": "walk3",
+    "source": "walk3.wav",
+    "seconds": 2.438
+  },
+  {
+    "name": "metalwalk3",
+    "source": "metalwalk3.wav",
+    "seconds": 4.713
+  },
+  {
+    "name": "Robot",
+    "source": "Robot.wav",
+    "seconds": 4.0055
+  },
+  {
+    "name": "walk1",
+    "source": "walk1.wav",
+    "seconds": 2.8935
+  },
+  {
+    "name": "walk4",
+    "source": "walk4.wav",
+    "seconds": 2.2805
+  },
+  {
+    "name": "metalwalk1",
+    "source": "metalwalk1.wav",
+    "seconds": 3.766
+  },
+  {
+    "name": "walk5",
+    "source": "walk5.wav",
+    "seconds": 2.816
+  },
+  {
+    "name": "metalrun",
+    "source": "metalrun.wav",
+    "seconds": 1.1105
+  }
+]

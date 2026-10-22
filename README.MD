@@ -9,6 +9,7 @@
 </p>
 
 > **Not a direct PC port.** An independent homebrew reimplementation of game mechanics and a custom interface designed specifically around the Nintendo DSi's **two screens**.
+> This technical portfolio project studies **observable game behavior** and reimplements systems in C/C++. It is not a port of the Windows executable, and no access to the original FNAF 2 source code was available.
 
 ---
 
@@ -49,7 +50,7 @@ Watch the [gameplay recording](docs/fnaf2-dsi-gameplay-v19.7.mp4) or open the [i
 * 🤖 **Animatronic AI systems:** Movement logic, route progression, behavior windows and per-night balancing.
 * 🎬 **Custom loading & transitions:** Boot terminal, animated loading, menus and introductory sequences.
 * 🏆 **Victory & progression UX:** 6 AM animation, shift summary, Continue and Game Menu.
-* 🌙 **Custom Night:** Interface for configuring animatronic difficulty; complete behavior should be verified against the released V19.7 build.
+* 🌙 **Custom Night:** The V19.6.2 source implements ten AI values (0–20), named presets, touch/button navigation and starting Night 7. This is not proof of full validation in published ROM V19.7 or physical hardware; preset names do not establish faithful original rules.
 * 🐛 **Incremental debugging:** Investigation of crashes, asset memory constraints, UI state transitions and gameplay issues.
 
 **Why dual-screen design matters:** The lower screen is not just a mirrored display. It serves as an **interactive control surface**, while the upper screen focuses on the gameplay view. New controls and custom UI flows were designed for this interaction model.
@@ -101,25 +102,37 @@ The archived ROM collection and earlier project records cover an iterative progr
 * **V0.7–V0.13:** Early menu, office, camera, audio and game-over development.
 * **V0.14–V0.17.1:** Timing diagnostics, camera controls and resource iteration.
 * **V0.18–V19.0:** Introductory scenes, boot fixes and victory/UI elements.
-* **V19.1–V19.7:** Continued gameplay fixes, loading transitions, AI balancing and two-screen polish described in project development notes.
+* **V19.1–V19.3:** See the version-specific source notes for memory/startup history; the 1,075,172-byte ARM9 text+data+BSS figure is a V19.3 record only and excludes gameplay allocations.
+* **V19.4–V19.5.1:** Supplied notes cover the 5→6 AM transition, two-screen victory, Game Over, and loading/interface changes for those revisions.
+* **V19.6–V19.6.2:** The supplied source includes per-night reaction windows, Custom Night settings and tests. Its validation report is limited to V19.6.2.
+* **V19.7:** The ROM in this repository is identified as V19.7. No supplied source or evidence demonstrates equivalence with the available V19.6.2 source.
 
-See [VERSION_AUDIT.md](VERSION_AUDIT.md) for evidence from the archived ROMs. **Text extracted from a binary alone does not prove a feature worked correctly.** The supplied historical archive did not contain every later build's source history.
+See [VERSION_AUDIT.md](VERSION_AUDIT.md) for archived ROM evidence. **Strings found in a binary do not prove that a feature worked.** The supplied historical archive did not contain every later build's source history.
 
 ---
 
-## 🏗️ Building From Source
+## 🏗️ Build prerequisites and source availability
 
-1. Install **devkitPro / devkitARM** and dependencies listed in the project's `Makefile`.
-2. Clone this repository:
+The source archive and browsable extraction are identified as **V19.6.2**, while the ROM in `Rom/` is identified as V19.7. **ROM publicada: V19.7. Fonte disponibilizada: V19.6.2.** No supplied evidence establishes that the two are equivalent.
 
-   ```bash
-   git clone https://github.com/agonisingbasher/FNAF2-DSi-Reverse-Engineering.git
-   ```
+### Repository contents and validation
 
-3. Enter the source directory containing the `Makefile`, then run `make` if supported by that build configuration.
-4. Test the resulting `.nds` in a compatible emulator or on homebrew-enabled DSi hardware.
+- `Rom/FNAF2-V19.7.nds` — published ROM file.
+- `Rom/FNAF2-V19.6.2-Codigo-Fonte.zip` — preserved source archive.
+- `source/FNAF2-V19.6.2/` — archive extracted without changing its build layout; includes source, assets, NitroFS files, tests, previews, reference assets, Makefile and ARM7 ELF input.
+- `docs/` — portfolio site, project images, emulator-recorded gameplay video and player guide at `docs/guide.html`.
 
-> The source tree, Makefile, assets and ROM must be present separately. This README alone does not establish a verified, reproducible build.
+The source's `VALIDATION.json` records V19.6.2 only: 18 automated suites, 462 NitroFS files verified, CRC/SHA-256 and ROM structure checks for NORMAL/DEV builds, and `hardware_tested: false`. The V19.6.2 release notes state it was not tested in an emulator or on a physical DSi. These historical records were read, not rerun for this update and are not evidence of V19.7 validation.
+
+The Makefile requires `DEVKITARM`, `$DEVKITARM/ds_rules`, the included `ds7_maine.elf`, assets and NitroFS data; some asset-generation scripts use Python/Pillow. The files do not establish that all host dependencies are available or that a clean build succeeds. No reproducible-build claim is made. The game's source was not changed or built for this site/documentation task.
+
+A scan for common credential/private-key markers found no obvious secrets in the archive; this is not a comprehensive security audit. The ARM7 ELF is retained because the Makefile explicitly references it as a build input. No extra build/cache directories or object intermediates were added.
+
+### License and third-party material
+
+No explicit license for the authored source code was found in the repository or archive. No license has been chosen on the developer's behalf. FNAF characters, artwork, audio and other third-party assets remain distinct from authored code; publishing code does not grant redistribution rights for third-party material.
+
+Browse the extracted [source tree](source/FNAF2-V19.6.2) or download the preserved [source ZIP](Rom/FNAF2-V19.6.2-Codigo-Fonte.zip).
 
 ---
 
@@ -140,7 +153,7 @@ See [VERSION_AUDIT.md](VERSION_AUDIT.md) for evidence from the archived ROMs. **
 
 ## ⚖️ Copyright & Open-Source Notice
 
-This is an **unofficial, non-commercial fan project**, with no affiliation with or endorsement by the owners of *Five Nights at Freddy's*. Original characters, names, visual artwork and audio remain the property of their respective rights holders. **An open-source code license does not grant redistribution rights to third-party assets.** Choose and document a code license only after checking source ownership and dependencies.
+This is an **unofficial, non-commercial fan project**, with no affiliation with or endorsement by the owners of *Five Nights at Freddy's*. Original characters, names, visual artwork and audio remain the property of their respective rights holders. No explicit license for the authored source code was found in the repository/archive, and no license was selected for the developer. **Publishing code does not grant redistribution rights to third-party assets.**
 
 ---
 

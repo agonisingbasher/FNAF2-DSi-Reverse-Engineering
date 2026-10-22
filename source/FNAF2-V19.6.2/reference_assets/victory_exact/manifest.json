@@ -1,0 +1,234 @@
+[
+  {
+    "path": "assets/victory/bottom/night_1_survived.png",
+    "width": 224,
+    "height": 16,
+    "mode": "RGBA",
+    "frames": 1,
+    "sha256": "576133b12aa0a421707d532da1a1ef456185188d30d701affd3aa393de409cfa"
+  },
+  {
+    "path": "assets/victory/bottom/night_2_survived.png",
+    "width": 224,
+    "height": 16,
+    "mode": "RGBA",
+    "frames": 1,
+    "sha256": "528dc2f15ad0fea506e3c715f72921746342aa103d2d32ac47c7a74d1e740df5"
+  },
+  {
+    "path": "assets/victory/bottom/night_3_survived.png",
+    "width": 224,
+    "height": 16,
+    "mode": "RGBA",
+    "frames": 1,
+    "sha256": "da9dfbaa62ddb06399df2667cdf9190a40e78e9971c4252576d3c6c8a61fc157"
+  },
+  {
+    "path": "assets/victory/bottom/night_4_survived.png",
+    "width": 224,
+    "height": 16,
+    "mode": "RGBA",
+    "frames": 1,
+    "sha256": "4075a5b571fabcd4568f3752134323b9d91356f1dbb3b19123680c33b5b3927b"
+  },
+  {
+    "path": "assets/victory/bottom/night_5_survived.png",
+    "width": 224,
+    "height": 16,
+    "mode": "RGBA",
+    "frames": 1,
+    "sha256": "bd7843c2789370159ce01ae28b515e5ed2c621482280e4406551c1eaadd95839"
+  },
+  {
+    "path": "assets/victory/bottom/night_6_survived.png",
+    "width": 224,
+    "height": 16,
+    "mode": "RGBA",
+    "frames": 1,
+    "sha256": "558bc230ea9e8df527bfb372db25e87d9dcb4efdf0cdfade11bed30bee486492"
+  },
+  {
+    "path": "assets/victory/bottom/night_7_survived.png",
+    "width": 224,
+    "height": 16,
+    "mode": "RGBA",
+    "frames": 1,
+    "sha256": "faf485576eba418fb5d9b0d377b3b5857b8a402f13c851025f3828dacb809675"
+  },
+  {
+    "path": "assets/victory/bottom/night_complete.png",
+    "width": 224,
+    "height": 24,
+    "mode": "RGBA",
+    "frames": 1,
+    "sha256": "c59107e47de21df9002bed43fad55015218de4d92ce292a7cea4c36febf4fd44"
+  },
+  {
+    "path": "assets/victory/bottom/paycheck_5.png",
+    "width": 224,
+    "height": 104,
+    "mode": "RGBA",
+    "frames": 1,
+    "sha256": "2589df5dea05d3ba1d2cff66f96155664f8137846bd4f93eff513e992bec6a3f"
+  },
+  {
+    "path": "assets/victory/bottom/paycheck_5_blur.png",
+    "width": 224,
+    "height": 104,
+    "mode": "RGBA",
+    "frames": 1,
+    "sha256": "3267d003ae05292f94adcba50fe533dcd6f4050943ed7c420103e9c3f8d5d483"
+  },
+  {
+    "path": "assets/victory/bottom/paycheck_6.png",
+    "width": 224,
+    "height": 104,
+    "mode": "RGBA",
+    "frames": 1,
+    "sha256": "a4d197d9419e1be653e106c9637791f651538956811963bc6a21152708977845"
+  },
+  {
+    "path": "assets/victory/bottom/paycheck_6_blur.png",
+    "width": 224,
+    "height": 104,
+    "mode": "RGBA",
+    "frames": 1,
+    "sha256": "c42e4e5241c3426cabbcb1e845707464fcfc4c49a393973ec32313737b943bdb"
+  },
+  {
+    "path": "assets/victory/bottom/tap_to_continue.png",
+    "width": 224,
+    "height": 16,
+    "mode": "RGBA",
+    "frames": 1,
+    "sha256": "e18587aeb9fcb668fc27d6f8a5d9acf209d13d0a9e90d0fc7af2c83373848277"
+  },
+  {
+    "path": "assets/victory/bottom/termination_7.png",
+    "width": 224,
+    "height": 104,
+    "mode": "RGBA",
+    "frames": 1,
+    "sha256": "463f281537ce124e55330c4e48404408ad26f89396214369a33e3a07e77272c8"
+  },
+  {
+    "path": "assets/victory/bottom/termination_7_blur.png",
+    "width": 224,
+    "height": 104,
+    "mode": "RGBA",
+    "frames": 1,
+    "sha256": "085df734650808cce231d47f9153410719285e8a34dca763b288d66c8bc5660c"
+  },
+  {
+    "path": "assets/victory/top/am.png",
+    "width": 96,
+    "height": 48,
+    "mode": "RGBA",
+    "frames": 1,
+    "sha256": "5bca1e9d3cd0983923bbabb367eecf4a1b68b48fef8c6cc11a0c3f8eb4e353d1"
+  },
+  {
+    "path": "assets/victory/top/clock_roll.png",
+    "width": 32,
+    "height": 384,
+    "mode": "RGBA",
+    "frames": 8,
+    "sha256": "e65b7d91e47eb3ad4caf87bb4120bcc7f17115c41c74d13a6dd8ec89d58a6a2f"
+  },
+  {
+    "path": "assets/victory/top/confetti.png",
+    "width": 256,
+    "height": 1536,
+    "mode": "RGBA",
+    "frames": 8,
+    "sha256": "0df3b83d3084c86bceea89b2f06a862cd2deff0943ee4f877c41307ab5676309"
+  },
+  {
+    "path": "assets/victory/top/digit_5.png",
+    "width": 32,
+    "height": 48,
+    "mode": "RGBA",
+    "frames": 1,
+    "sha256": "f1e749cc60fee8c394ed4e1869de832e97f89914a78bca56975518f2310043f7"
+  },
+  {
+    "path": "assets/victory/top/digit_6.png",
+    "width": 32,
+    "height": 48,
+    "mode": "RGBA",
+    "frames": 1,
+    "sha256": "1402cc5532d00654edb24fc5807719c3bf46c94c5b9f8f1a7c561d2290bf6b89"
+  },
+  {
+    "path": "assets/victory/top/shadow_golden_a.png",
+    "width": 256,
+    "height": 104,
+    "mode": "RGBA",
+    "frames": 1,
+    "sha256": "d2146f90101ca79ce9a30530ebaef1d725cefe4dd05bc1f8618ae9994b6fb726"
+  },
+  {
+    "path": "assets/victory/top/shadow_golden_b.png",
+    "width": 256,
+    "height": 104,
+    "mode": "RGBA",
+    "frames": 1,
+    "sha256": "03f8370916ba76a871cd488c6ba99223d1df53444a122a81f89166389518fcf2"
+  },
+  {
+    "path": "assets/victory/top/survived.png",
+    "width": 224,
+    "height": 32,
+    "mode": "RGBA",
+    "frames": 1,
+    "sha256": "ce7540112fcf3865e85dc9efb5de145e1043702c420ceb57933ef4b5d71aae3f"
+  },
+  {
+    "path": "assets/victory/top/toys_a.png",
+    "width": 256,
+    "height": 104,
+    "mode": "RGBA",
+    "frames": 1,
+    "sha256": "3113950abc86dec9c5c8e23d2536b5333e03e19592f6561f5e8c97dd34f48f30"
+  },
+  {
+    "path": "assets/victory/top/toys_b.png",
+    "width": 256,
+    "height": 104,
+    "mode": "RGBA",
+    "frames": 1,
+    "sha256": "922dfc50174ef7b31d285fa4344c7252a6d1d893303298202f8891d7d76c2018"
+  },
+  {
+    "path": "assets/victory/top/withered_full_a.png",
+    "width": 256,
+    "height": 104,
+    "mode": "RGBA",
+    "frames": 1,
+    "sha256": "2097d25ce670a8f87ee45a44428149550590fa1689663313d9326f9de7a1a669"
+  },
+  {
+    "path": "assets/victory/top/withered_full_b.png",
+    "width": 256,
+    "height": 104,
+    "mode": "RGBA",
+    "frames": 1,
+    "sha256": "3ddc100bd897de52ddce50ff5adbdde465d5ce977847fced6be3f46be7f5d60c"
+  },
+  {
+    "path": "assets/victory/top/withered_light_a.png",
+    "width": 256,
+    "height": 104,
+    "mode": "RGBA",
+    "frames": 1,
+    "sha256": "d601b258e64463d0073db547ba835facd13fa976649bd108c8a819c4e3e600c7"
+  },
+  {
+    "path": "assets/victory/top/withered_light_b.png",
+    "width": 256,
+    "height": 104,
+    "mode": "RGBA",
+    "frames": 1,
+    "sha256": "5944733ae98703f29aa9dccd6f338176685175aa3bb003e929de169cf7c984fa"
+  }
+]

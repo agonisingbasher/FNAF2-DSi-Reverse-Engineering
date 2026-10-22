@@ -1,0 +1,22 @@
+{
+  "source_sha256": "b01cc3fa1300acc9d4a6a02e48f5aed351dd43569292fe27e896e0dc86b0c135",
+  "original_dimensions": [
+    1448,
+    1086
+  ],
+  "runtime_dimensions": [
+    512,
+    384
+  ],
+  "bytes": 197136,
+  "night_to_cell": [
+    0,
+    0,
+    0,
+    0,
+    1,
+    2,
+    3
+  ],
+  "night_5_6_7_document_text_changed": false
+}

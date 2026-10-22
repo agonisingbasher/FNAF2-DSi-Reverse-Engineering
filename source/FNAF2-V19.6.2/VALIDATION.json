@@ -1,0 +1,50 @@
+{
+  "version": "0.19.6.2",
+  "rom_checks": [
+    {
+      "file": "FNAF2-V19.6.2-DSi-DEV.nds",
+      "bytes": 36007936,
+      "sha256": "802db93f1c3ec2b096a9b07993f0d84aa9fe4121aa5239451e5392624ff9b73c",
+      "startup_log": false,
+      "header_crc_valid": true,
+      "dsi_sections_present": true,
+      "arm7_preserved": true,
+      "legacy_trampoline_valid": true,
+      "banner_crc_valid": true,
+      "nitrofs_verified_files": 462
+    },
+    {
+      "file": "FNAF2-V19.6.2-DSi-NORMAL.nds",
+      "bytes": 36006912,
+      "sha256": "9e307b30c17d0c0af0c84b43007ae070bc1827e2de9ae6eab97c2c983e7258a2",
+      "startup_log": false,
+      "header_crc_valid": true,
+      "dsi_sections_present": true,
+      "arm7_preserved": true,
+      "legacy_trampoline_valid": true,
+      "banner_crc_valid": true,
+      "nitrofs_verified_files": 462
+    }
+  ],
+  "unit_suites_passed": [
+    "state",
+    "office",
+    "corrections",
+    "v14",
+    "panel",
+    "call_stream",
+    "camera",
+    "ai",
+    "v19",
+    "cutscene",
+    "contract",
+    "victory_timing",
+    "v195",
+    "end_ui",
+    "gameover",
+    "victory_interaction",
+    "ambience",
+    "custom_night"
+  ],
+  "hardware_tested": false
+}

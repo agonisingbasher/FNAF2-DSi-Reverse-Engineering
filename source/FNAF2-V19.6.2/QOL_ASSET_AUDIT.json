@@ -1,0 +1,33 @@
+{
+  "supplied_pngs": {
+    "reference_assets/ui_update/assets/gameover/gameover_bottom_bg.png": "4bb05392b02cee6f6bfeeba2984f1d604d18031c905fc76cf2c47c859087a6a7",
+    "reference_assets/ui_update/assets/gameover/button_retry_night.png": "f76901a8781d503f6445e34bac8a11990eafbf6a274ef1e5228bbe1f55d31f25",
+    "reference_assets/ui_update/assets/victory/bottom/button_game_menu.png": "55263af8dec7b4a47faf948b669b39a6528842edcbd669daa53e99f5d4ab0cf3",
+    "reference_assets/ui_update/assets/victory/bottom/button_tap_continue.png": "8f009160627d203bbf3b2244495d7adaf8e62680f7ccc3d5213ab4b7fe36dee4"
+  },
+  "unchanged_top_banks": {
+    "v194_top_shadow_golden.bin": "6f0176368a478569bd48f71da33c1963cd2480c8e119061675334b857a0d6255",
+    "v194_top_toys.bin": "0dcb2b8d8a55dc7d0790acf9a4fd74e6e8241162f636b7db374389b5847f19fa",
+    "v194_top_withered_full.bin": "4014e2991442b0013134f0eebf97ca179a8c5acdf7073cfbb51afd45b1e4f96e",
+    "v194_top_withered_light.bin": "70057ae938f31fd5ccbadddddeea2b2a03b402d1372a0bd98526a44e73648aa8",
+    "v194_clock.bin": "6483178dac5fe7e8ebbb553cde12dba6370cb003d7257cd1df27d047e67b8793"
+  },
+  "buttons": {
+    "left": [
+      8,
+      150,
+      116,
+      36
+    ],
+    "right": [
+      132,
+      150,
+      116,
+      36
+    ]
+  },
+  "all_nights_have_both_buttons": true,
+  "renderer_asan_ubsan_passed": true,
+  "physical_dsi_tested": false,
+  "emulator_tested": false
+}

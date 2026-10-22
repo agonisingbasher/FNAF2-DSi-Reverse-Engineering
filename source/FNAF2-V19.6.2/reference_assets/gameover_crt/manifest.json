@@ -1,0 +1,35 @@
+{
+  "source_sha256": "e787d23c0e91fd7120fafb398d275b1d53b10e1f740c0ce67321e9882bb2c833",
+  "source_dimensions": [
+    1448,
+    1086
+  ],
+  "sheet_dimensions": [
+    768,
+    576
+  ],
+  "cell_dimensions": [
+    256,
+    192
+  ],
+  "loaded_bytes": 442896,
+  "palette_entries": 256,
+  "zero_based_row_major_mapping": {
+    "idle": [
+      0,
+      1,
+      2
+    ],
+    "retry_pressed": 3,
+    "menu_pressed": 4,
+    "shutdown": [
+      6,
+      7,
+      5,
+      8,
+      "black"
+    ]
+  },
+  "runtime_png_decoder": false,
+  "reordered_cells": false
+}

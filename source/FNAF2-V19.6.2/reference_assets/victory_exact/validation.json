@@ -1,0 +1,11 @@
+{
+  "png_count": 29,
+  "dimensions": "PASS",
+  "rgba": "PASS",
+  "transparent_pixels": "PASS",
+  "distinct_pose_pairs": 4,
+  "zip_crc": "verified after packaging",
+  "runtime_console_test": false,
+  "documentation_revision": "2026-10-14: instrucoes explicitas das duas telas",
+  "asset_changes": false
+}

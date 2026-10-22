@@ -1,0 +1,464 @@
+[
+  {
+    "name": "office_00",
+    "width": 400,
+    "height": 192,
+    "transparent": false
+  },
+  {
+    "name": "office_01",
+    "width": 400,
+    "height": 192,
+    "transparent": false
+  },
+  {
+    "name": "office_02",
+    "width": 400,
+    "height": 192,
+    "transparent": false
+  },
+  {
+    "name": "office_03",
+    "width": 400,
+    "height": 192,
+    "transparent": false
+  },
+  {
+    "name": "office_04",
+    "width": 400,
+    "height": 192,
+    "transparent": false
+  },
+  {
+    "name": "office_05",
+    "width": 400,
+    "height": 192,
+    "transparent": false
+  },
+  {
+    "name": "office_06",
+    "width": 400,
+    "height": 192,
+    "transparent": false
+  },
+  {
+    "name": "office_07",
+    "width": 400,
+    "height": 192,
+    "transparent": false
+  },
+  {
+    "name": "office_08",
+    "width": 400,
+    "height": 192,
+    "transparent": false
+  },
+  {
+    "name": "office_09",
+    "width": 400,
+    "height": 192,
+    "transparent": false
+  },
+  {
+    "name": "office_10",
+    "width": 400,
+    "height": 192,
+    "transparent": false
+  },
+  {
+    "name": "office_11",
+    "width": 400,
+    "height": 192,
+    "transparent": false
+  },
+  {
+    "name": "office_12",
+    "width": 400,
+    "height": 192,
+    "transparent": false
+  },
+  {
+    "name": "office_13",
+    "width": 400,
+    "height": 192,
+    "transparent": false
+  },
+  {
+    "name": "office_14",
+    "width": 400,
+    "height": 192,
+    "transparent": false
+  },
+  {
+    "name": "office_15",
+    "width": 400,
+    "height": 192,
+    "transparent": false
+  },
+  {
+    "name": "office_16",
+    "width": 400,
+    "height": 192,
+    "transparent": false
+  },
+  {
+    "name": "office_17",
+    "width": 400,
+    "height": 192,
+    "transparent": false
+  },
+  {
+    "name": "office_18",
+    "width": 400,
+    "height": 192,
+    "transparent": false
+  },
+  {
+    "name": "office_19",
+    "width": 400,
+    "height": 192,
+    "transparent": false
+  },
+  {
+    "name": "office_20",
+    "width": 400,
+    "height": 192,
+    "transparent": false
+  },
+  {
+    "name": "desk_0",
+    "width": 213,
+    "height": 109,
+    "transparent": true
+  },
+  {
+    "name": "desk_1",
+    "width": 213,
+    "height": 109,
+    "transparent": true
+  },
+  {
+    "name": "desk_2",
+    "width": 213,
+    "height": 109,
+    "transparent": true
+  },
+  {
+    "name": "desk_3",
+    "width": 213,
+    "height": 109,
+    "transparent": true
+  },
+  {
+    "name": "mask_01",
+    "width": 256,
+    "height": 192,
+    "transparent": true
+  },
+  {
+    "name": "mask_02",
+    "width": 256,
+    "height": 192,
+    "transparent": true
+  },
+  {
+    "name": "mask_03",
+    "width": 256,
+    "height": 192,
+    "transparent": true
+  },
+  {
+    "name": "mask_04",
+    "width": 256,
+    "height": 192,
+    "transparent": true
+  },
+  {
+    "name": "mask_05",
+    "width": 256,
+    "height": 192,
+    "transparent": true
+  },
+  {
+    "name": "mask_06",
+    "width": 256,
+    "height": 192,
+    "transparent": true
+  },
+  {
+    "name": "mask_07",
+    "width": 256,
+    "height": 192,
+    "transparent": true
+  },
+  {
+    "name": "mask_08",
+    "width": 256,
+    "height": 192,
+    "transparent": true
+  },
+  {
+    "name": "mask_09",
+    "width": 256,
+    "height": 192,
+    "transparent": true
+  },
+  {
+    "name": "mask_10",
+    "width": 256,
+    "height": 192,
+    "transparent": true
+  },
+  {
+    "name": "monitor_01",
+    "width": 256,
+    "height": 192,
+    "transparent": true
+  },
+  {
+    "name": "monitor_02",
+    "width": 256,
+    "height": 192,
+    "transparent": true
+  },
+  {
+    "name": "monitor_03",
+    "width": 256,
+    "height": 192,
+    "transparent": true
+  },
+  {
+    "name": "monitor_04",
+    "width": 256,
+    "height": 192,
+    "transparent": true
+  },
+  {
+    "name": "monitor_05",
+    "width": 256,
+    "height": 192,
+    "transparent": true
+  },
+  {
+    "name": "monitor_06",
+    "width": 256,
+    "height": 192,
+    "transparent": true
+  },
+  {
+    "name": "monitor_07",
+    "width": 256,
+    "height": 192,
+    "transparent": true
+  },
+  {
+    "name": "monitor_08",
+    "width": 256,
+    "height": 192,
+    "transparent": true
+  },
+  {
+    "name": "monitor_09",
+    "width": 256,
+    "height": 192,
+    "transparent": true
+  },
+  {
+    "name": "monitor_10",
+    "width": 256,
+    "height": 192,
+    "transparent": true
+  },
+  {
+    "name": "monitor_11",
+    "width": 256,
+    "height": 192,
+    "transparent": true
+  },
+  {
+    "name": "light_0",
+    "width": 15,
+    "height": 23,
+    "transparent": true
+  },
+  {
+    "name": "light_1",
+    "width": 15,
+    "height": 23,
+    "transparent": true
+  },
+  {
+    "name": "light_2",
+    "width": 15,
+    "height": 23,
+    "transparent": true
+  },
+  {
+    "name": "light_3",
+    "width": 15,
+    "height": 23,
+    "transparent": true
+  },
+  {
+    "name": "battery_0",
+    "width": 40,
+    "height": 18,
+    "transparent": true
+  },
+  {
+    "name": "battery_1",
+    "width": 40,
+    "height": 18,
+    "transparent": true
+  },
+  {
+    "name": "battery_2",
+    "width": 40,
+    "height": 18,
+    "transparent": true
+  },
+  {
+    "name": "battery_3",
+    "width": 40,
+    "height": 18,
+    "transparent": true
+  },
+  {
+    "name": "battery_4",
+    "width": 40,
+    "height": 18,
+    "transparent": true
+  },
+  {
+    "name": "plush_0",
+    "width": 28,
+    "height": 32,
+    "transparent": true
+  },
+  {
+    "name": "plush_1",
+    "width": 28,
+    "height": 32,
+    "transparent": true
+  },
+  {
+    "name": "plush_2",
+    "width": 28,
+    "height": 32,
+    "transparent": true
+  },
+  {
+    "name": "plush_3",
+    "width": 28,
+    "height": 32,
+    "transparent": true
+  },
+  {
+    "name": "plush_4",
+    "width": 28,
+    "height": 32,
+    "transparent": true
+  },
+  {
+    "name": "plush_5",
+    "width": 28,
+    "height": 32,
+    "transparent": true
+  },
+  {
+    "name": "plush_6",
+    "width": 28,
+    "height": 32,
+    "transparent": true
+  },
+  {
+    "name": "plush_7",
+    "width": 28,
+    "height": 32,
+    "transparent": true
+  },
+  {
+    "name": "plush_8",
+    "width": 48,
+    "height": 18,
+    "transparent": true
+  },
+  {
+    "name": "panel_00",
+    "width": 256,
+    "height": 192,
+    "transparent": false
+  },
+  {
+    "name": "panel_01",
+    "width": 256,
+    "height": 192,
+    "transparent": false
+  },
+  {
+    "name": "panel_02",
+    "width": 256,
+    "height": 192,
+    "transparent": false
+  },
+  {
+    "name": "panel_03",
+    "width": 256,
+    "height": 192,
+    "transparent": false
+  },
+  {
+    "name": "panel_04",
+    "width": 256,
+    "height": 192,
+    "transparent": false
+  },
+  {
+    "name": "panel_05",
+    "width": 256,
+    "height": 192,
+    "transparent": false
+  },
+  {
+    "name": "panel_06",
+    "width": 256,
+    "height": 192,
+    "transparent": false
+  },
+  {
+    "name": "panel_07",
+    "width": 256,
+    "height": 192,
+    "transparent": false
+  },
+  {
+    "name": "panel_08",
+    "width": 256,
+    "height": 192,
+    "transparent": false
+  },
+  {
+    "name": "panel_09",
+    "width": 256,
+    "height": 192,
+    "transparent": false
+  },
+  {
+    "name": "panel_10",
+    "width": 256,
+    "height": 192,
+    "transparent": false
+  },
+  {
+    "name": "panel_11",
+    "width": 256,
+    "height": 192,
+    "transparent": false
+  },
+  {
+    "name": "panel_12",
+    "width": 256,
+    "height": 192,
+    "transparent": false
+  }
+]

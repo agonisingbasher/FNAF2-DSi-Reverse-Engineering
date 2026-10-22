@@ -44,3 +44,7 @@ Inspecionadas 12 ROMs distintas do arquivo `Fnaf Versões.zip` (somente builds s
 - As builds `-LOG` são variantes da mesma numeração e não foram analisadas como releases distintos.
 - As versões V19.1 a V19.7 não foram fornecidas no ZIP histórico.
 - Para um changelog preciso por implementação são necessários código-fonte, commits ou documentação das builds.
+
+## Correspondência dos arquivos atuais do repositório
+
+O workspace também contém `Rom/FNAF2-V19.7.nds` e o pacote `Rom/FNAF2-V19.6.2-Codigo-Fonte.zip`, cujo Makefile e `VALIDATION.json` identificam a fonte como V19.6.2. Não foi encontrada documentação que demonstre equivalência entre essa fonte e a ROM V19.7. Portanto: **ROM publicada: V19.7. Fonte disponibilizada: V19.6.2.** A diferença de rótulo não foi eliminada por renomeação. Os 18 testes, 462 arquivos NitroFS e verificações de integridade constantes no relatório pertencem às builds NORMAL/DEV V19.6.2, não à ROM V19.7.

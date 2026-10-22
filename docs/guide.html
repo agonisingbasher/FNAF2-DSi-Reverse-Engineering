@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090d13">
+  <meta name="description" content="Guia rápido para jogar FNAF 2 DSi e enviar feedback.">
+  <title>Guia do jogador | FNAF 2 DSi</title>
+  <link rel="stylesheet" href="style.css?v=2026.10.20.5">
+</head>
+<body>
+  <div class="scanlines" aria-hidden="true"></div>
+  <header class="nav guide-nav"><a class="brand" href="index.html"><span class="dot"></span> FA / DEV <small>FNAF 2 DSi</small></a><a class="secondary" href="index.html" data-i18n="back">← Voltar ao portfólio</a><button id="language" class="lang" type="button" aria-label="Mudar idioma para inglês" aria-pressed="false">EN</button></header>
+  <main id="top" class="wrap section player-guide">
+    <div class="section-label">PLAYER QUICK GUIDE / V19.7</div>
+    <h1 data-i18n="title">Guia rápido do jogador</h1>
+    <p class="section-intro" data-i18n="releaseNotice">A ROM publicada está identificada como V19.7. A fonte disponível é V19.6.2; os controles abaixo foram conferidos nessa fonte e podem diferir da ROM publicada. A gravação publicada foi feita em emulador no computador; este guia não confirma teste da ROM V19.7 em hardware físico.</p>
+    <section><h2 data-i18n="downloadTitle">Baixar e iniciar</h2><ol><li><span data-i18n="download1">Abra a página oficial do projeto e escolha um download.</span> <a href="https://gamejolt.com/games/fnaf2-dsi-xl/1108982" target="_blank" rel="noopener noreferrer" data-i18n="gamejoltLink">Game Jolt</a> <span data-i18n="or">ou baixe a ROM publicada no</span> <a href="https://github.com/agonisingbasher/FNAF2-DSi-Reverse-Engineering/raw/refs/heads/main/Rom/FNAF2-V19.7.nds" data-i18n="romLink">repositório GitHub</a>.</li><li data-i18n="download2">A gravação publicada mostra execução em emulador no computador. A fonte V19.6.2 documenta execução em emulador ou DSi com homebrew, mas não confirma que a ROM V19.7 foi testada em hardware. Nenhum outro console ou método está documentado.</li><li data-i18n="download3">A primeira inicialização prepara arquivos de progresso no armazenamento disponível. Se não for possível gravar, o progresso pode não ser salvo.</li></ol></section>
+    <section><h2 data-i18n="savesTitle">Preserve seus saves</h2><p data-i18n="savesText">Não apague, sobrescreva nem mova a pasta de saves entre versões sem fazer uma cópia de segurança. A fonte V19.6.2 inicializa o armazenamento e registra o diretório escolhido; os nomes/caminhos dependem da variante e do ambiente. Se for trocar a ROM, copie a pasta de saves antes.</p></section>
+    <section><h2 data-i18n="controlsTitle">Controles conferidos na fonte V19.6.2</h2><p data-i18n="controlsCaveat">Tabela dos comandos implementados na fonte disponibilizada, não uma garantia de correspondência integral com a ROM V19.7.</p>
+      <div class="guide-table-wrap"><table><thead><tr><th data-i18n="input">Entrada</th><th data-i18n="action">Ação</th></tr></thead><tbody>
+        <tr><td>Touchscreen</td><td data-i18n="touchMap">Toque no mapa inferior para escolher uma câmera; o painel inferior aciona tablet, máscara e luzes.</td></tr>
+        <tr><td data-i18n="cameraInput">ABXY (monitor aberto)</td><td data-i18n="cameraButtons">A/X/Y/B percorrem câmeras vizinhas em direções diferentes.</td></tr>
+        <tr><td data-i18n="tabletInput">↓ / B (monitor fechado)</td><td data-i18n="tabletMask">↓ abre/fecha o tablet; B aciona a máscara.</td></tr>
+        <tr><td data-i18n="lightInput">X / Y / A (monitor fechado)</td><td data-i18n="lights">X: luz central; Y: luz esquerda; A: luz direita. A luz central também pode ser bloqueada pelo estado do jogo.</td></tr>
+        <tr><td data-i18n="cameraLightInput">R (monitor aberto)</td><td data-i18n="cameraLight">Mantém a luz da câmera enquanto houver bateria; toque também pode alterná-la no painel.</td></tr>
+        <tr><td data-i18n="windInput">L (CAM 11)</td><td data-i18n="windBox">Mantém o comando para dar corda na Music Box quando a câmera e o estado permitem.</td></tr>
+        <tr><td>↑</td><td data-i18n="upAction">Horn no escritório quando permitido; em outros estados, silencia a chamada.</td></tr>
+        <tr><td data-i18n="endInput">A / START / B (Game Over e vitória)</td><td data-i18n="endButtons">A ou START confirma Retry/Continue; B retorna ao menu. Toques mantidos ao entrar na tela precisam ser soltos antes de ativar.</td></tr>
+        <tr><td data-i18n="officeDpadInput">← / → (monitor fechado)</td><td data-i18n="officeDpad">Move the view/pan across the office.</td></tr>
+        <tr><td data-i18n="customInput">Custom Night</td><td data-i18n="customControls">D-pad selects/focuses; A increases and B decreases AI (0–20); X changes focus; touchscreen can select presets/controls; START begins Night 7.</td></tr>
+      </tbody></table></div>
+    </section>
+    <section><h2 data-i18n="feedbackTitle">Relatar um problema</h2><p><span data-i18n="feedbackLead">Envie feedback pela página do projeto no</span> <a href="https://gamejolt.com/games/fnaf2-dsi-xl/1108982" target="_blank" rel="noopener noreferrer" data-i18n="gamejoltLink">Game Jolt</a> <span data-i18n="orOpen">ou abra uma issue no</span> <a href="https://github.com/agonisingbasher/FNAF2-DSi-Reverse-Engineering/issues" target="_blank" rel="noopener noreferrer">GitHub</a><span data-i18n="feedbackDetails">. Inclua a versão, dispositivo/emulador, noite, passos para reproduzir e log, quando disponível. Não inclua dados pessoais nem arquivos de save públicos.</span></p></section>
+    <p class="guide-versions" data-i18n="versionNote">ROM publicada: V19.7. Fonte disponibilizada: V19.6.2.</p>
+  </main>
+  <footer><span>FNAF 2 DSi XL / UNOFFICIAL FAN PROJECT</span><span data-i18n="footer">Projeto independente, não comercial. Direitos dos personagens e assets pertencem aos titulares.</span></footer>
+  <script src="guide.js?v=2026.10.20.1"></script>
+</body>
+</html>
