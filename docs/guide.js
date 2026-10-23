@@ -1,6 +1,7 @@
 (() => {
   const translations = {
-    back: '← Back to portfolio',
+    back: '← Back to project',
+    portfolioHome: 'Main portfolio ↗',
     title: 'Player quick guide',
     releaseNotice: 'The published ROM is identified as V19.7. The supplied source is V19.6.2; controls below were checked against that source and may differ from the published ROM. The published recording was made in an emulator on a computer; this guide does not confirm V19.7 testing on physical hardware.',
     downloadTitle: 'Download and start',

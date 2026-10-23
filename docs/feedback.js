@@ -4,6 +4,7 @@ const FEEDBACK_ENDPOINT = '';
 const translations = {
   en: {
     backHome: 'Back to project',
+    portfolioHome: 'Main portfolio ↗',
     brandTag: 'SECURITY SYSTEM // 1987',
     feedbackEyebrow: 'FEEDBACK CENTER',
     feedbackHeading: 'Feedback & bug reports',
