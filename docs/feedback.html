@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#090d13">
-  <meta name="description" content="Envie feedback ou relate um bug do FNAF 2 DSi XL.">
+  <meta name="description" content="Envie feedback, sugestões ou relatos de bugs do FNAF 2 DSi XL.">
   <title>Feedback e bugs | FNAF 2 DSi XL</title>
-  <link rel="stylesheet" href="style.css?v=2026.10.23.1">
+  <link rel="stylesheet" href="style.css?v=2026.10.26.1">
 </head>
 <body>
   <div class="scanlines" aria-hidden="true"></div>
@@ -20,7 +20,16 @@
     <div class="section-label" data-i18n="feedbackEyebrow">CENTRAL DE FEEDBACK</div>
     <h1 data-i18n="feedbackHeading">Feedback e bugs</h1>
     <p class="feedback-intro" data-i18n="feedbackIntro">Conte o que aconteceu ou compartilhe uma sugestão. Os campos com * são obrigatórios.</p>
-    <form id="feedback-form" class="feedback-form" enctype="multipart/form-data">
+    <p class="feedback-category"><span data-i18n="categoryLabel">Categoria</span>: <strong id="feedback-category-value">FNAF</strong></p>
+
+    <form id="feedback-form" class="feedback-form" method="post" enctype="multipart/form-data" action="#">
+      <input type="hidden" name="category" id="feedback-category" value="FNAF">
+      <input type="hidden" name="language" id="feedback-language" value="Português (Brasil)">
+      <div class="feedback-honeypot" aria-hidden="true">
+        <label for="feedback-website">Website</label>
+        <input id="feedback-website" name="website" type="text" tabindex="-1" autocomplete="off">
+      </div>
+
       <label for="feedback-name" data-i18n="nameLabel">Nome *</label>
       <input id="feedback-name" name="name" type="text" autocomplete="name" maxlength="120" required>
 
@@ -34,22 +43,23 @@
       <textarea id="feedback-description" name="description" rows="7" maxlength="10000" required></textarea>
 
       <label for="feedback-images" data-i18n="imagesLabel">Imagens (até 5)</label>
-      <input id="feedback-images" name="images" type="file" accept="image/*" multiple>
-      <small class="feedback-hint" data-i18n="imagesHint">Selecione no máximo 5 imagens.</small>
+      <input id="feedback-images" name="attachments[]" type="file" accept="image/*" multiple aria-describedby="feedback-images-hint">
+      <small class="feedback-hint" id="feedback-images-hint" data-i18n="imagesHint">Até 5 imagens. Fotos grandes são reduzidas antes do envio.</small>
 
       <label for="feedback-video" data-i18n="videoLabel">Vídeo (até 1)</label>
-      <input id="feedback-video" name="video" type="file" accept="video/*">
-      <small class="feedback-hint" data-i18n="videoHint">Selecione um arquivo de vídeo.</small>
+      <input id="feedback-video" name="attachments[]" type="file" accept="video/*" aria-describedby="feedback-video-hint">
+      <small class="feedback-hint" id="feedback-video-hint" data-i18n="videoHint">Um vídeo de até 20 MB.</small>
 
-      <p id="feedback-status" class="feedback-status" role="status" aria-live="polite" data-state="info" data-i18n="endpointMissing">O envio ainda não está configurado. A URL do backend precisa ser adicionada antes que os relatos possam ser enviados.</p>
+      <progress class="feedback-progress" id="feedback-progress" max="100" value="0" hidden></progress>
+      <p id="feedback-status" class="feedback-status" role="status" aria-live="polite" data-state="info" data-i18n="readyNote">Preencha os campos, anexe imagens ou um vídeo curto se quiser e envie.</p>
       <button class="feedback-submit" type="submit" data-i18n="submitLabel">Enviar feedback</button>
+      <p class="feedback-privacy" data-i18n="privacyNote">O envio usa um serviço externo de formulários e é encaminhado por e-mail ao desenvolvedor. Não envie senhas, dados pessoais sensíveis ou saves privados.</p>
     </form>
   </main>
   <footer>
     <span>FNAF 2 DSi XL / <span data-i18n="footerNote">PROJETO DE FÃ NÃO OFICIAL</span></span>
-    <span data-i18n="privacyNote">Quando configurado, o backend encaminhará os dados e arquivos para felipsempre10@gmail.com.</span>
-    <a class="feedback-back" href="index.html#top" data-i18n="backToTitle">Voltar para o título ↑</a>
+    <a class="feedback-back" href="index.html" data-i18n="backToTitle">Voltar ao título ↑</a>
   </footer>
-  <script src="feedback.js?v=2026.10.23.1"></script>
+  <script src="feedback.js?v=2026.10.26.1"></script>
 </body>
 </html>

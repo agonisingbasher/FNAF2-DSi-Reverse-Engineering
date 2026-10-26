@@ -25,8 +25,8 @@
     upAction: 'Horn in the office when allowed; in other states, mutes the phone call.',
     endButtons: 'A or START confirms Retry/Continue; B returns to the menu. A touch held while entering the screen must be released before activation.',
     feedbackTitle: 'Report an issue',
-    feedbackText: 'Send feedback on the project page at', orOpen: 'or open an issue on',
-    feedbackDetails: '. Include the version, device/emulator, night, reproduction steps and a log if available. Do not post personal data or public save files.',
+    feedbackLead: 'Send feedback or report a bug through the', feedbackLink: 'project feedback page',
+    feedbackDetails: '. Include the version, device/emulator, night, reproduction steps and a log if available. You can attach up to 5 images and 1 short video. Do not include personal data or public save files.',
     versionNote: 'Published ROM: V19.7. Supplied source: V19.6.2.',
     footer: 'Independent, non-commercial project. Characters and assets belong to their respective owners.'
   };
