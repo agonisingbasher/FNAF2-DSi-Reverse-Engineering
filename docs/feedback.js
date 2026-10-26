@@ -1,6 +1,5 @@
-// Paste the Basin form endpoint here (https://usebasin.com/f/...).
 // The destination inbox is configured only in the Basin dashboard, never in this repository.
-const FEEDBACK_ENDPOINT = '';
+const FEEDBACK_ENDPOINT = 'https://usebasin.com/f/a3a9354c54dc';
 
 const MAX_IMAGES = 5;
 const MAX_IMAGE_BYTES = 40 * 1024 * 1024;
@@ -316,8 +315,8 @@ form.addEventListener('submit', async (event) => {
     payload.append('Categoria', form.elements.category.value);
     payload.append('language', language === 'en' ? 'English' : 'Português (Brasil)');
     payload.append('page', `${window.location.origin}${window.location.pathname}`);
-    [...preparedImages, videoFile].filter(Boolean).forEach((file) => {
-      payload.append('attachments[]', file, file.name);
+    [...preparedImages, videoFile].filter(Boolean).forEach((file, index) => {
+      payload.append(`attachment_${index + 1}`, file, file.name);
     });
 
     setStatus('sending', 'info');
