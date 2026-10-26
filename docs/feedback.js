@@ -1,5 +1,5 @@
 // The destination inbox is configured only in the Basin dashboard, never in this repository.
-const FEEDBACK_ENDPOINT = 'https://usebasin.com/f/a3a9354c54dc';
+const FEEDBACK_ENDPOINT = 'https://usebasin.com/f/b73fbcbad424';
 
 const MAX_IMAGES = 5;
 const MAX_IMAGE_BYTES = 40 * 1024 * 1024;
