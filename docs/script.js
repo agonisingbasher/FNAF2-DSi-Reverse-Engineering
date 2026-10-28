@@ -153,15 +153,6 @@ if (heroEyebrowText) {
   heroEyebrow.dataset.i18n = 'heroEyebrow';
 }
 
-const feedbackLink = document.createElement('a');
-feedbackLink.className = 'feedback-cta';
-feedbackLink.href = 'feedback.html';
-feedbackLink.dataset.i18n = 'feedbackLink';
-feedbackLink.textContent = 'Feedback e bugs →';
-original.feedbackLink = feedbackLink.textContent;
-translations.en.feedbackLink = 'Feedback & bug reports →';
-document.querySelector('footer').append(feedbackLink);
-
 const originalAttributes = new Map();
 document.querySelectorAll('[data-i18n-alt],[data-i18n-aria-label]').forEach(el => {
   originalAttributes.set(el, { alt: el.getAttribute('alt'), ariaLabel: el.getAttribute('aria-label') });
