@@ -7,9 +7,10 @@ const MAX_VIDEO_BYTES = 20 * 1024 * 1024;
 const IMAGE_MAX_DIMENSION = 1600;
 const IMAGE_QUALITY = 0.82;
 const LANGUAGE_STORAGE_KEY = 'fnaf-feedback-language';
+const LANGUAGES = ['pt-BR', 'en', 'es', 'fr'];
 
 const messages = {
-  pt: {
+  'pt-BR': {
     ready: 'Preencha os campos, anexe imagens ou um vídeo curto se quiser e envie.',
     endpointMissing: 'O envio está temporariamente indisponível. Tente novamente mais tarde.',
     imagesTooMany: 'Selecione no máximo 5 imagens.',
@@ -43,6 +44,8 @@ const messages = {
   }
 };
 
+messages.es = {"ready":"Completa los campos, adjunta imágenes o un video corto si quieres y envía.","endpointMissing":"El envío no está disponible por ahora. Inténtalo de nuevo más tarde.","imagesTooMany":"Selecciona como máximo 5 imágenes.","invalidImage":"Selecciona solo archivos de imagen.","imageTooLarge":"Una de las imágenes pasa del límite de 40 MB.","invalidVideo":"Selecciona un archivo de video.","videoTooLarge":"El video debe pesar como máximo 20 MB.","preparing":"Preparando los archivos…","sending":"Enviando tus comentarios…","progress":"Enviando tus comentarios… {percent}%","sent":"Comentarios enviados con éxito. ¡Gracias!","failed":"No se pudieron enviar tus comentarios. Revisa tu conexión e inténtalo de nuevo.","serverFailed":"El servicio no aceptó el envío (HTTP {status}). Inténtalo de nuevo más tarde.","timeout":"El envío tardó demasiado. Inténtalo de nuevo con archivos más pequeños."};
+messages.fr = {"ready":"Remplissez les champs, joignez des images ou une vidéo courte si vous le souhaitez, puis envoyez.","endpointMissing":"L'envoi est temporairement indisponible. Réessayez plus tard.","imagesTooMany":"Sélectionnez au maximum 5 images.","invalidImage":"Sélectionnez uniquement des fichiers image.","imageTooLarge":"L'une des images dépasse la limite de 40 MB.","invalidVideo":"Sélectionnez un fichier vidéo.","videoTooLarge":"La vidéo doit peser 20 MB au maximum.","preparing":"Préparation des fichiers…","sending":"Envoi de votre retour…","progress":"Envoi de votre retour… {percent}%","sent":"Votre retour a bien été envoyé. Merci !","failed":"Votre retour n'a pas pu être envoyé. Vérifiez votre connexion et réessayez.","serverFailed":"Le service n'a pas accepté l'envoi (HTTP {status}). Réessayez plus tard.","timeout":"L'envoi a pris trop de temps. Réessayez avec des fichiers plus légers."};
 const translations = {
   en: {
     pageTitle: 'Feedback & bug reports | FNAF 2 DSi XL',
@@ -69,6 +72,8 @@ const translations = {
   }
 };
 
+translations.es = {"brandTag":"SISTEMA DE SEGURIDAD // 1987","backHome":"Volver al proyecto","portfolioHome":"Portafolio principal ↗","feedbackEyebrow":"CENTRAL DE COMENTARIOS","feedbackHeading":"Comentarios y bugs","feedbackIntro":"Cuéntanos qué pasó o comparte una sugerencia. Los campos con * son obligatorios.","categoryLabel":"Categoría","nameLabel":"Nombre *","emailLabel":"Contacto (email) *","titleLabel":"Título *","descriptionLabel":"Descripción *","imagesLabel":"Imágenes (hasta 5)","imagesHint":"Hasta 5 imágenes. Las fotos grandes se reducen antes del envío.","videoLabel":"Video (hasta 1)","videoHint":"Un video de hasta 20 MB.","readyNote":"Completa los campos, adjunta imágenes o un video corto si quieres y envía.","submitLabel":"Enviar comentarios","privacyNote":"El envío usa un servicio externo de formularios y se reenvía por correo al desarrollador. No envíes contraseñas, datos personales sensibles ni saves privados.","footerNote":"PROYECTO DE FANS NO OFICIAL","backToTitle":"Volver al título ↑","pageTitle":"Comentarios y bugs | FNAF 2 DSi XL","pageDescription":"Envía comentarios, sugerencias o reportes de bugs de FNAF 2 DSi XL."};
+translations.fr = {"brandTag":"SYSTÈME DE SÉCURITÉ // 1987","backHome":"Retour au projet","portfolioHome":"Portefolio principal ↗","feedbackEyebrow":"CENTRE DE RETOURS","feedbackHeading":"Retours et bugs","feedbackIntro":"Dites-nous ce qui s'est passé ou partagez une suggestion. Les champs avec * sont obligatoires.","categoryLabel":"Catégorie","nameLabel":"Nom *","emailLabel":"Contact (e-mail) *","titleLabel":"Titre *","descriptionLabel":"Description *","imagesLabel":"Images (jusqu'à 5)","imagesHint":"Jusqu'à 5 images. Les photos volumineuses sont réduites avant l'envoi.","videoLabel":"Vidéo (jusqu'à 1)","videoHint":"Une vidéo de 20 MB maximum.","readyNote":"Remplissez les champs, joignez des images ou une vidéo courte si vous le souhaitez, puis envoyez.","submitLabel":"Envoyer un retour","privacyNote":"L'envoi passe par un service de formulaires externe et est transmis par e-mail au développeur. N'envoyez pas de mots de passe, de données personnelles sensibles ni de sauvegardes privées.","footerNote":"PROJET DE FANS NON OFFICIEL","backToTitle":"Retour au titre ↑","pageTitle":"Retours et bugs | FNAF 2 DSi XL","pageDescription":"Envoyez vos retours, suggestions ou signalements de bugs pour FNAF 2 DSi XL."};
 const form = document.getElementById('feedback-form');
 const statusMessage = document.getElementById('feedback-status');
 const progressBar = document.getElementById('feedback-progress');
@@ -78,7 +83,8 @@ const videoInput = document.getElementById('feedback-video');
 const languageInput = document.getElementById('feedback-language');
 const categoryInput = document.getElementById('feedback-category');
 const categoryValue = document.getElementById('feedback-category-value');
-const languageButton = document.getElementById('language');
+const languageButtons = document.querySelectorAll('[data-lang-option]');
+const FORM_LANGUAGE_NAMES = { 'pt-BR': 'Português (Brasil)', en: 'English', es: 'Español', fr: 'Français' };
 const metaDescription = document.querySelector('meta[name="description"]');
 const defaults = {
   title: document.title,
@@ -89,17 +95,39 @@ document.querySelectorAll('[data-i18n]').forEach((element) => {
   originalText.set(element, element.textContent);
 });
 
-const requestedLanguage = new URLSearchParams(window.location.search).get('lang');
-let language = requestedLanguage === 'en' ? 'en' : 'pt';
+let language = 'pt-BR';
 
-if (!requestedLanguage) {
+function normalizeStoredLanguage(value) {
+  if (value === 'pt') return 'pt-BR';
+  return LANGUAGES.includes(value) ? value : null;
+}
+
+function readStoredLanguage() {
   try {
-    const storedLanguage = localStorage.getItem(LANGUAGE_STORAGE_KEY);
-    if (storedLanguage === 'en' || storedLanguage === 'pt') language = storedLanguage;
+    return normalizeStoredLanguage(localStorage.getItem(LANGUAGE_STORAGE_KEY));
   } catch (error) {
     if (error.name !== 'SecurityError') throw error;
+    return null;
   }
 }
+
+/* Sem ?lang= na URL e sem escolha gravada, o navegador decide: quem abre de Buenos
+   Aires ve espanhol, quem abre de Paris ve frances. Um pt de qualquer pais continua
+   em pt-BR, que e a unica variante portuguesa que temos. */
+function detectLanguage() {
+  const preferred = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language];
+  for (const tag of preferred) {
+    if (!tag) continue;
+    const base = String(tag).toLowerCase().split('-')[0];
+    if (base === 'pt') return 'pt-BR';
+    const match = LANGUAGES.find((code) => code.toLowerCase() === base);
+    if (match) return match;
+  }
+  return 'pt-BR';
+}
+
+const requestedLanguage = new URLSearchParams(window.location.search).get('lang');
+const initialLanguage = normalizeStoredLanguage(requestedLanguage) || readStoredLanguage() || detectLanguage();
 
 function normalizeCategory(value) {
   return String(value || '').replace(/[\u0000-\u001f\u007f]/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 60);
@@ -135,32 +163,33 @@ function setStatus(key, state = 'info', params = {}) {
 }
 
 function applyLanguage(nextLanguage) {
-  language = nextLanguage;
+  if (LANGUAGES.includes(nextLanguage)) language = nextLanguage;
+  const dict = translations[language] || {};
   try {
     localStorage.setItem(LANGUAGE_STORAGE_KEY, language);
   } catch (error) {
     if (error.name !== 'SecurityError') throw error;
   }
 
-  document.documentElement.lang = language === 'en' ? 'en' : 'pt-BR';
-  document.title = language === 'en' ? translations.en.pageTitle : defaults.title;
+  /* Em portugues nao ha dict: o texto que ja esta no HTML e a fonte da pagina. Nos
+     outros idiomas uma chave ausente cai no portugues em vez de apagar o element. */
+  const valueFor = (key, fallback) => (dict[key] !== undefined ? dict[key] : fallback);
+
+  document.documentElement.lang = language === 'pt-BR' ? 'pt-BR' : language;
+  document.title = valueFor('pageTitle', defaults.title);
   if (metaDescription) {
-    metaDescription.content = language === 'en' ? translations.en.pageDescription : defaults.description;
+    metaDescription.content = valueFor('pageDescription', defaults.description);
   }
   document.querySelectorAll('[data-i18n]').forEach((element) => {
-    const key = element.dataset.i18n;
-    element.textContent = language === 'en' && translations.en[key] !== undefined
-      ? translations.en[key]
-      : originalText.get(element);
+    element.textContent = valueFor(element.dataset.i18n, originalText.get(element));
   });
-  if (languageInput) languageInput.value = language === 'en' ? 'English' : 'Português (Brasil)';
-  if (languageButton) {
-    languageButton.textContent = language === 'en' ? 'PT' : 'EN';
-    languageButton.setAttribute('aria-pressed', String(language === 'en'));
-    languageButton.setAttribute('aria-label', language === 'en'
-      ? 'Mudar idioma para português'
-      : 'Switch language to English');
-  }
+  if (languageInput) languageInput.value = FORM_LANGUAGE_NAMES[language];
+  languageButtons.forEach((button) => {
+    button.setAttribute('aria-pressed', String(button.dataset.langOption === language));
+  });
+  const pageUrl = new URL(window.location.href);
+  pageUrl.searchParams.set('lang', language);
+  history.replaceState(null, '', pageUrl);
   renderStatus();
 }
 
@@ -247,8 +276,8 @@ function sendFeedback(payload) {
   });
 }
 
-languageButton.addEventListener('click', () => {
-  applyLanguage(language === 'pt' ? 'en' : 'pt');
+languageButtons.forEach((button) => {
+  button.addEventListener('click', () => applyLanguage(button.dataset.langOption));
 });
 
 form.addEventListener('submit', async (event) => {
@@ -313,7 +342,7 @@ form.addEventListener('submit', async (event) => {
     payload.append('title', form.elements.title.value.trim());
     payload.append('description', form.elements.description.value.trim());
     payload.append('Categoria', form.elements.category.value);
-    payload.append('language', language === 'en' ? 'English' : 'Português (Brasil)');
+    payload.append('language', FORM_LANGUAGE_NAMES[language]);
     payload.append('page', `${window.location.origin}${window.location.pathname}`);
     [...preparedImages, videoFile].filter(Boolean).forEach((file, index) => {
       payload.append(`attachment_${index + 1}`, file, file.name);
@@ -323,7 +352,7 @@ form.addEventListener('submit', async (event) => {
     await sendFeedback(payload);
     form.reset();
     applyCategory();
-    if (languageInput) languageInput.value = language === 'en' ? 'English' : 'Português (Brasil)';
+    if (languageInput) languageInput.value = FORM_LANGUAGE_NAMES[language];
     progressBar.hidden = true;
     setStatus('sent', 'success');
   } catch (error) {
@@ -340,4 +369,4 @@ form.addEventListener('submit', async (event) => {
   }
 });
 
-applyLanguage(language);
+applyLanguage(initialLanguage);

@@ -122,6 +122,10 @@ The source archive and browsable extraction are identified as **V19.6.2**, while
 - `source/FNAF2-V19.6.2/` — archive extracted without changing its build layout; includes source, assets, NitroFS files, tests, previews, reference assets, Makefile and ARM7 ELF input.
 - `docs/` — portfolio site, project images, emulator-recorded gameplay video and player guide at `docs/guide.html`.
 
+### Site languages
+
+`index.html`, `guide.html` and `feedback.html` each carry a four-button PT / EN / ES / FR switcher backed by dictionaries written for this project. There is no Google Translate link and no cycling button. Language resolution goes `?lang=`, then the saved choice, then `navigator.languages`, then pt-BR; any `pt-*` tag resolves to `pt-BR`, the only Portuguese variant translated here. Spanish and French cover every key on each page, and a key missing from a dictionary falls back to the Portuguese text already in the HTML instead of printing `undefined`.
+
 The source's `VALIDATION.json` records V19.6.2 only: 18 automated suites, 462 NitroFS files verified, CRC/SHA-256 and ROM structure checks for NORMAL/DEV builds, and `hardware_tested: false`. The V19.6.2 release notes state it was not tested in an emulator or on a physical DSi. These historical records were read, not rerun for this update and are not evidence of V19.7 validation.
 
 The Makefile requires `DEVKITARM`, `$DEVKITARM/ds_rules`, the included `ds7_maine.elf`, assets and NitroFS data; some asset-generation scripts use Python/Pillow. The files do not establish that all host dependencies are available or that a clean build succeeds. No reproducible-build claim is made. The game's source was not changed or built for this site/documentation task.
