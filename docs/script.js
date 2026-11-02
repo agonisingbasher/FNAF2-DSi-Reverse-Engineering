@@ -11,6 +11,10 @@ Object.assign(translations.en, {
   releaseNote: 'Unofficial fan project. File availability is shown on the release page.'
 });
 
+Object.assign(translations.en, {
+  navUpdates: 'Updates', updatesLabel: 'UPDATES / COMMUNITY REPORTS', updatesTitle: 'Fixes that arrive with the community.', updatesIntro: 'A place to record bugs found after launch, the investigation, and the published fixes.', updatesFixLabel: 'FIX PUBLISHED', updatesCredit: 'Bug reported by Kvx698', updatesCreditText: 'Thank you for helping test and improve the project. View the Reddit report ↗', updatesBugTitle: 'Balloon Boy could remain with the vent-camera sprite.', updatesBugText: 'In certain transitions, the character’s last visual state was not released correctly. This could leave a vent-camera sprite on screen even when Balloon Boy should already be elsewhere.', updatesFixText: 'V19.8 adds new handling to clear that state and reposition the character. The tests below show the search for the correct position; the final image records the finished result.', updatesDownload: 'DOWNLOAD FNAF 2 DSi V19.8 ↧', updatesNote: '.nds file for Nintendo DSi/DSi XL. Use only with compatible hardware and software.', updatesFinal: '05 / CORRECT POSITION', updateReportAlt: 'Community report showing Balloon Boy outside the correct position', updateGalleryAria: 'Balloon Boy positioning test sequence'
+});
+
 // Subtle reveal effects. Content remains visible without JavaScript or when reduced motion is preferred.
 if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   const revealItems = document.querySelectorAll('.hero-grid > div, .metrics > div, .section:not(.demo-section) > h2, .section-intro, .feature-grid > article, .engineering-grid > *, .timeline.detailed > div, .demo-section .reveal, .interaction-section .reveal:not(.interaction-shot), .comparison-section .reveal');
